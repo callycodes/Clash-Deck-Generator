@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+
+    <title>A Multiplayer Game</title>
+    
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<!--<link rel="stylesheet" type="text/css" href="https://link.clashroyale.com/deck/assets/build/0.3/css/styles.css" /> -->
+  </head>
+  
+  <body onload="welcome()">
+  
+  <img class="logo" src="img/clash_logo.png">
+  
+  
+  <div class="game">
+  
+      
+      <div class="row">
+
+    <div class="col-sm">
+        <button type="button" onclick="generateDeck()" class="btn btn-primary btn-lg clash-text start-button">Random Deck</button>
+      </div>
+      <div class="col-sm">
+          <button type="button" onclick="draftDeck()" class="btn btn-primary btn-lg clash-text start-button">Draft Deck</button>
+      </div>
+  
+          </div>
+  
+
+<div class="row">
+	<div class="col-md-12">
+	<div class="panel panel-default"> <div class="panel-body">
+	
+	<h2 style="font-size: 20px;">Messages: </h2>
+  
+  <div id="messages">
+
+    
+
+
+    
+
+ 
+
+  </div>
+
+
+	</div>
+	</div>
+	</div>
+	
+
+</div>
+
+<div id="draft-choice" class="panel panel-default"> <div class="panel-body">
+<center>
+<h2>Draft Choices</h2>
+<div class="row">
+  <div class="col-sm-6">
+    <img id="icon-1-draft" onclick="" class="card-icon-draft img-responsive" src="">
+  </div>
+  <div class="col-sm-6">
+    <img id="icon-2-draft" onclick="" class="card-icon-draft img-responsive" src="">
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-3">
+    <img id="icon-1-pick" class="card-icon-pick img-responsive" src="">
+  </div>
+  <div class="col-sm-3">
+    <img id="icon-2-pick" class="card-icon-pick img-responsive" src="">
+  </div>
+  <div class="col-sm-3">
+    <img id="icon-3-pick" class="card-icon-pick img-responsive" src="">
+  </div>
+  <div class="col-sm-3">
+    <img id="icon-4-pick" class="card-icon-pick img-responsive" src="">
+  </div>
+</div>
+</center>
+</div>
+</div>
+
+
+<div class="panel panel-default"> <div class="panel-body">
+
+<div class="row">
+
+<div class="col-md-7">
+
+
+
+
+<div class="row">
+
+<div class="col-sm-3">
+<img id="icon-1" class="card-icon img-responsive" src="img/giant.png">
+</div>
+<div class="col-sm-3">
+<img id="icon-2" class="card-icon img-responsive" src="img/giant.png">
+</div>
+<div class="col-sm-3">
+<img id="icon-3" class="card-icon img-responsive" src="img/giant.png">
+</div>
+<div class="col-sm-3">
+<img id="icon-4" class="card-icon img-responsive" src="img/giant.png">
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="col-sm-3">
+<img id="icon-5" class="card-icon img-responsive" src="img/giant.png">
+</div>
+<div class="col-sm-3">
+<img id="icon-6" class="card-icon img-responsive" src="img/giant.png">
+</div>
+<div class="col-sm-3">
+<img id="icon-7" class="card-icon img-responsive" src="img/giant.png">
+</div>
+<div class="col-sm-3">
+<img id="icon-8" class="card-icon img-responsive" src="img/giant.png">
+</div>
+
+</div>
+
+
+
+
+</div>
+
+<div class="col-md-5">
+
+
+
+<h2 id="avgelixir" style="text-align: center; font-size: 30px;" >Avg. Elixir: 4.2</h2>
+
+
+ <button type="button" id="copy-deck" onclick="copyDeck()" class="btn btn-primary btn-lg clash-text start-button copy-button">Copy Deck</button>
+
+  
+</div>
+
+</div>
+
+ </div> </div>
+	
+	</div>
+
+  <script src="game.js"></script>
+  </body>
+
+  
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>
